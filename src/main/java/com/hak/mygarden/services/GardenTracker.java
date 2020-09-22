@@ -1,7 +1,7 @@
 package com.hak.mygarden.services;
 
+import com.hak.mygarden.jdbc.JDBCClient;
 import com.hak.mygarden.models.Plant;
-import com.hak.mygarden.jdbc.H2Client;
 
 import org.springframework.stereotype.Service;
 
@@ -27,11 +27,11 @@ public class GardenTracker {
 
     @PostConstruct
     public static void execute() throws IOException{
-        Plant plant= new Plant(1,"a","b","c","d");
-        storeData(plant);
+//        Plant plant= new Plant(1,"a","b","c","d");
+//        storeData(plant);
         // DB name is PLANT
         String sql = "INSERT INTO PLANT " + "VALUES (1,'a','b','c','d')";
-        H2Client client = new H2Client();
+        JDBCClient client = new JDBCClient();
         client.insertPlant(sql);
     }
 }
