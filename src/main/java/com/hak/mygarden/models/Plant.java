@@ -14,7 +14,7 @@ import javax.persistence.Id;
 public class Plant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String common_name;
     private String scientific_name;
     private String quantity;
@@ -22,7 +22,7 @@ public class Plant {
 
     public Plant(){}
 
-    public Plant(Integer id, String common_name, String scientific_name, String quantity, String birthday) {
+    public Plant(Long id, String common_name, String scientific_name, String quantity, String birthday) {
         this.id = id;
         this.common_name = common_name;
         this.scientific_name = scientific_name;
