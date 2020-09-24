@@ -1,4 +1,4 @@
-package repository;
+package com.hak.mygarden.repository;
 
 import com.hak.mygarden.models.Plant;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -27,12 +27,12 @@ public class GardenTracker {
 
     @PostConstruct
     public static void execute() throws IOException{
-//        Plant plant= new Plant(1,"a","b","c","d");
-//        storeData(plant);
-        // DB name is PLANT
-        String sql = "INSERT INTO PLANT " + "VALUES (1,'a','b','c','d')";
-        JDBCClient client = new JDBCClient();
-        client.insertPlant(sql);
+////        Plant plant= new Plant(1,"a","b","c","d");
+////        storeData(plant);
+//        // DB name is PLANT
+//        String sql = "INSERT INTO PLANT " + "VALUES (1,'a','b','c','d')";
+//        JDBCClient client = new JDBCClient();
+//        client.insertPlant(sql);
     }
 }
 
