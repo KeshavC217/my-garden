@@ -7,4 +7,6 @@ Proposed features include:
 * Facilitate searching for new plants to add, where to find them, etc.  
 
 Authored By:
-Abhineeth A.
+* Keshav C.
+* Abhineeth A.
+* Himanshu R.
