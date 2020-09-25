@@ -14,10 +14,13 @@ public class Plant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @Column(name = "common_name")
     private String common_name;
+    @Column( name = "scientific_name")
     private String scientific_name;
+    @Column( name = "quantity")
     private String quantity;
+    @Column( name = "birthday")
     private String birthday;
 
     public Plant(){}
