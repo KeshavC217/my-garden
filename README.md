@@ -6,3 +6,5 @@ Proposed features include:
 * Store all plants and other relevant info about personal garden
 * Facilitate searching for new plants to add, where to find them, etc.  
 
+Authored By:
+Abhineeth A.
