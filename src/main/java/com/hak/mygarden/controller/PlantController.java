@@ -2,8 +2,6 @@ package com.hak.mygarden.controller;
 
 import com.hak.mygarden.models.Plant;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import com.hak.mygarden.repository.PlantRepository;
 
@@ -26,6 +24,5 @@ public class PlantController {
     public Plant createPlant(@RequestBody Plant plant) {
         return this.plantRepository.save(plant);
     }
-
 
 }
