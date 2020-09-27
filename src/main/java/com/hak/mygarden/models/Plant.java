@@ -1,11 +1,17 @@
 package com.hak.mygarden.models;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 @Entity
@@ -21,17 +27,7 @@ public class Plant {
     @Column( name = "quantity")
     private String quantity;
     @Column( name = "birthday")
-    private String birthday;
-
-    public Plant(){}
-
-    public Plant(Long id, String common_name, String scientific_name, String quantity, String birthday) {
-        this.id = id;
-        this.common_name = common_name;
-        this.scientific_name = scientific_name;
-        this.quantity = quantity;
-        this.birthday = birthday;
-    }
+    private String birthday = new SimpleDateFormat("dd-MM-yyyy").format(new Date());
 
     @Override
     public String toString() {
