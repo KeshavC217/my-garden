@@ -21,9 +21,9 @@ public class Plant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "common_name")
-    private String common_name;
+    private String commonName;
     @Column( name = "scientific_name")
-    private String scientific_name;
+    private String scientificName;
     @Column( name = "quantity")
     private String quantity;
     @Column( name = "birthday")
@@ -31,6 +31,6 @@ public class Plant {
 
     @Override
     public String toString() {
-        return String.join(",", id.toString(), common_name, scientific_name, quantity, birthday);
+        return String.join(",", id.toString(), commonName, scientificName, quantity, birthday);
     }
 }

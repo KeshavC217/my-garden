@@ -29,10 +29,17 @@ public class PlantController {
 
     // find plant by id
     @GetMapping("/plants/{id}")
-    public ResponseEntity<Plant> getEmployeeById(@PathVariable(value = "id") Long plantId)
+    public ResponseEntity<Plant> getPlantById(@PathVariable(value = "id") Long plantId)
             throws ResourceNotFoundException {
         Plant plant = plantRepository.findById(plantId)
                 .orElseThrow(() -> new ResourceNotFoundException("Plant not found for this id :: " + plantId));
+        return ResponseEntity.ok().body(plant);
+    }
+
+    @GetMapping("/plants/name/{name}")
+    public ResponseEntity<Plant> getPlantByName(@PathVariable(value = "name") String plantName)
+            throws ResourceNotFoundException {
+        Plant plant = plantRepository.findDistinctByCommonNameContains(plantName);
         return ResponseEntity.ok().body(plant);
     }
 
