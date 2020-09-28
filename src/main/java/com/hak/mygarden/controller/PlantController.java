@@ -39,7 +39,8 @@ public class PlantController {
     @GetMapping("/plants/name/{name}")
     public ResponseEntity<Plant> getPlantByName(@PathVariable(value = "name") String plantName)
             throws ResourceNotFoundException {
-        Plant plant = plantRepository.findDistinctByCommonNameContains(plantName);
+        Plant plant = plantRepository.findDistinctByCommonNameContains(plantName)
+                .orElseThrow(() -> new ResourceNotFoundException("Plant not found containing this name :: " + plantName));
         return ResponseEntity.ok().body(plant);
     }
 
